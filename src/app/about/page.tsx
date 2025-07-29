@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Globe, Code, Rocket, Handshake } from 'lucide-react';
+import { Globe, Code, Rocket, Handshake, Users, Building } from 'lucide-react';
 
 const skills = [
   'Web Development',
@@ -12,16 +12,32 @@ const skills = [
 ];
 
 const timeline = [
-  { year: '2018', event: 'Started journey into software development.' },
-  { year: '2020', event: 'Launched first major open-source project.' },
-  { year: '2022', event: 'Ventured into blockchain and Web3 development.' },
-  { year: '2024', event: 'Founded Zenux Central to build practical software solutions.' },
+  { year: '2020', event: 'Started journey into software development.' },
+  { year: '2023', event: 'Launched first major open-source project.' },
+  { year: '2025', event: 'A continuous flow of many new projects and innovations.' },
 ];
+
+const teamMembers = [
+    {
+        name: 'Osborn Nkansah',
+        role: 'Founder, Ostech Templates',
+        skills: 'Web Dev | Cyber Security | Graphic Design | Mobile Dev',
+        avatar: 'https://placehold.co/200x200.png',
+        fallback: 'ON'
+    },
+    {
+        name: 'Ernest Ohene',
+        role: 'Co-Founder, Ostech Templates',
+        skills: 'Web Dev | Cyber Security | AI Developer',
+        avatar: 'https://placehold.co/200x200.png',
+        fallback: 'EO'
+    }
+]
 
 export default function AboutPage() {
   return (
     <section className="py-12 md:py-24">
-      <div className="container max-w-4xl">
+      <div className="container px-4 md:px-6 max-w-4xl">
         <div className="flex flex-col items-center text-center">
           <Avatar className="w-24 h-24 md:w-32 md:h-32 mb-4 border-4 border-accent">
             <AvatarImage src="https://placehold.co/200x200.png" alt="Elliot Akpalu" data-ai-hint="man portrait"/>
@@ -30,6 +46,7 @@ export default function AboutPage() {
           <h1 className="text-3xl md:text-5xl font-bold font-headline text-foreground">
             👋 I'm Elliot Akpalu.
           </h1>
+          <h2 className="mt-2 text-xl md:text-2xl font-semibold text-accent">Founder, Zenux Central</h2>
           <p className="mt-4 text-md md:text-lg text-muted-foreground">
             A passionate developer building tools that solve real problems for real people.
           </p>
@@ -71,6 +88,38 @@ export default function AboutPage() {
             {skills.map((skill) => (
               <div key={skill} className="bg-secondary text-secondary-foreground rounded-full px-3 py-1.5 text-xs md:text-sm font-medium">
                 {skill}
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="mt-12 md:mt-16">
+           <h2 className="text-2xl md:text-3xl font-bold text-center font-headline mb-2">
+            <Users className="inline-block mr-2 text-accent" />
+            Our Development Team
+          </h2>
+          <div className='text-center mb-10'>
+            <div className='inline-flex items-center gap-2'>
+              <Avatar className="w-8 h-8">
+                  <AvatarImage src='https://i.ibb.co/Ldv5k0L/logo.png' alt="Ostech Templates" />
+                  <AvatarFallback>OT</AvatarFallback>
+              </Avatar>
+              <h3 className="text-xl md:text-2xl font-bold font-headline text-foreground">Ostech Templates</h3>
+            </div>
+            <div className="mt-2 text-muted-foreground">
+                Personal blog | 📸Photography | Web development|👁️ Cyber security | Graphic design
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-center gap-8">
+            {teamMembers.map((member) => (
+              <div key={member.name} className="flex flex-col items-center text-center max-w-[200px]">
+                <Avatar className="w-24 h-24 md:w-32 md:h-32 mb-4 border-4 border-accent">
+                    <AvatarImage src={member.avatar} alt={member.name} data-ai-hint="team member" />
+                    <AvatarFallback>{member.fallback}</AvatarFallback>
+                </Avatar>
+                <h3 className="font-bold font-headline text-lg md:text-xl text-foreground">{member.name}</h3>
+                <p className="text-base font-semibold text-accent">{member.role}</p>
+                <p className="text-sm text-muted-foreground mt-1">{member.skills}</p>
               </div>
             ))}
           </div>

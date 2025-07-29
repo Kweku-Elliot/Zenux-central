@@ -1,3 +1,4 @@
+
 import { ContactForm } from '@/components/contact-form';
 import { Mail, Send, Github, Linkedin } from 'lucide-react';
 import Link from 'next/link';
@@ -13,7 +14,7 @@ const contactMethods = [
     icon: Send,
     title: 'Telegram',
     value: '@elliot_akpalu',
-    href: '#',
+    href: 'https://t.me/elliot_akpalu',
   },
   {
     icon: Github,
@@ -25,14 +26,14 @@ const contactMethods = [
     icon: Linkedin,
     title: 'LinkedIn',
     value: 'Elliot Akpalu',
-    href: '#',
+    href: 'https://www.linkedin.com/in/elliot-akpalu/',
   },
 ];
 
 export default function ContactPage() {
   return (
     <section className="py-12 md:py-24">
-      <div className="container">
+      <div className="container px-4 md:px-6">
         <div className="text-center mb-10 md:mb-12">
           <h1 className="text-3xl md:text-5xl font-bold font-headline text-foreground">
             Get In Touch
@@ -42,21 +43,23 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
-          <div className="space-y-6">
-            {contactMethods.map((method) => (
-              <div key={method.title} className="flex items-start gap-4">
-                <div className="bg-accent text-accent-foreground rounded-full p-2.5 md:p-3">
-                  <method.icon className="h-5 w-5 md:h-6 md:w-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg md:text-xl font-bold font-headline">{method.title}</h3>
-                  <Link href={method.href} className="text-sm md:text-base text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+          <div className="flex flex-col justify-center">
+            <div className="space-y-8">
+              {contactMethods.map((method) => (
+                <div key={method.title} className="flex items-center gap-4">
+                  <div className="bg-accent text-accent-foreground rounded-full p-3">
+                    <method.icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg md:text-xl font-bold font-headline">{method.title}</h3>
+                    <Link href={method.href || '#'} className="text-base text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
                       {method.value}
-                  </Link>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           
           <div className="p-6 md:p-8 border rounded-lg bg-card text-card-foreground">
