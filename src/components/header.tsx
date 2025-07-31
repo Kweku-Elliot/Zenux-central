@@ -6,13 +6,21 @@ import { Menu, Zap } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { useEffect, useState } from 'react';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -71,6 +79,11 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left">
+                <SheetHeader>
+                  <SheetTitle>
+                    <VisuallyHidden>Mobile Navigation Menu</VisuallyHidden>
+                  </SheetTitle>
+                </SheetHeader>
                 <Link href="/" className="flex items-center space-x-2 mb-6">
                   <Zap className="h-6 w-6 text-accent" />
                   <span className="font-bold font-headline">Zenux Central</span>

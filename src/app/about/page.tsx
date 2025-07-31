@@ -1,3 +1,4 @@
+
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Globe, Code, Rocket, Handshake, Users, Building } from 'lucide-react';
@@ -90,6 +91,32 @@ export default function AboutPage() {
                 {skill}
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className="mt-12 md:mt-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-center font-headline mb-2">
+            <Building className="inline-block mr-2 text-accent" />
+            Zenux Central Leadership
+          </h2>
+          <div className="flex flex-wrap justify-center gap-8 mt-8">
+            <div className="flex flex-col items-center text-center max-w-[200px]">
+              <Avatar className="w-24 h-24 md:w-32 md:h-32 mb-4 border-4 border-accent">
+                <AvatarImage src="https://placehold.co/200x200.png" alt="Elliot Akpalu" data-ai-hint="man portrait"/>
+                <AvatarFallback>EA</AvatarFallback>
+              </Avatar>
+              <h3 className="font-bold font-headline text-lg md:text-xl text-foreground">Elliot Akpalu</h3>
+              <p className="text-base font-semibold text-accent">Founder</p>
+            </div>
+            <div className="flex flex-col items-center text-center max-w-[200px]">
+              <Avatar className="w-24 h-24 md:w-32 md:h-32 mb-4 border-4 border-accent">
+                <AvatarImage src="https://placehold.co/200x200.png" alt="Harrison Kanor" data-ai-hint="man portrait"/>
+                <AvatarFallback>HK</AvatarFallback>
+              </Avatar>
+              <h3 className="font-bold font-headline text-lg md:text-xl text-foreground">Harrison Kanor</h3>
+              <p className="text-base font-semibold text-accent">Co-Founder, Marketing Specialist</p>
+              <p className="text-sm text-muted-foreground mt-1">Marketing Strategy | Cybersecurity | Negotiation</p>
+            </div>
           </div>
         </div>
         

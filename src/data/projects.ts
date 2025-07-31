@@ -27,7 +27,7 @@ export const projects: Project[] = [
     aiHint: 'invoice app',
   },
   {
-    name: 'Zenux Central',
+    name: 'Zenux Wallet',
     description: 'A self-custodial multichain wallet with cross-chain interoperability.',
     thumbnail: 'https://placehold.co/600x400.png',
     techStack: ['Blockchain', 'React Native', 'Solidity'],

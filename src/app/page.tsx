@@ -36,10 +36,10 @@ export default function Home() {
         <div className="container">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">
-              What We Do
+              Our Services
             </h2>
             <p className="mt-4 text-md md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Zenux Central is dedicated to creating high-quality, user-centric software solutions across various domains. From web applications to blockchain infrastructure, our work is driven by passion and a commitment to excellence.
+              From simple landing pages to full-featured e-commerce stores, we offer a range of web solutions tailored to your business needs. We are committed to delivering high-quality, user-centric products.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -47,18 +47,18 @@ export default function Home() {
               <div className="inline-block p-4 bg-accent/10 rounded-full mb-4">
                 <Code className="h-8 w-8 md:h-10 md:w-10 mx-auto text-accent" />
               </div>
-              <h3 className="mt-4 text-xl font-bold font-headline">Web Development</h3>
+              <h3 className="mt-4 text-xl font-bold font-headline">Custom Websites</h3>
               <p className="mt-2 text-muted-foreground">
-                Crafting responsive and performant websites and applications for the modern web.
+                Crafting responsive and performant websites and applications for businesses and individuals.
               </p>
             </div>
             <div className="p-6 rounded-lg transition-all duration-300 hover:bg-card hover:shadow-lg">
               <div className="inline-block p-4 bg-accent/10 rounded-full mb-4">
                 <Layers className="h-8 w-8 md:h-10 md:w-10 mx-auto text-accent" />
               </div>
-              <h3 className="mt-4 text-xl font-bold font-headline">Blockchain Solutions</h3>
+              <h3 className="mt-4 text-xl font-bold font-headline">E-commerce Solutions</h3>
               <p className="mt-2 text-muted-foreground">
-                Building secure and scalable decentralized applications and token ecosystems.
+                Building secure and scalable online stores to help you sell your products and services.
               </p>
             </div>
             <div className="p-6 rounded-lg transition-all duration-300 hover:bg-card hover:shadow-lg">
